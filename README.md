@@ -10,6 +10,6 @@ Omniping is a modular, multi-layer network observability and diagnostic suite wr
 
 ## Installation & Building
 ```bash
-git clone [https://github.com/username/omniping.git](https://github.com/username/omniping.git)
+git clone [https://github.com/darnellwashingtonjr94-art/omniping.git](https://github.com/darnellwashingtonjr94-art/omniping.git)
 cd omniping
 ./scripts/build.sh
