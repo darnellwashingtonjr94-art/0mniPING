@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omniping
+  namespace: monitoring
+  labels:
+    app: omniping
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: omniping
+  template:
+    metadata:
+      labels:
+        app: omniping
+    spec:
+      containers:
+      - name: omniping
+        image: omniping:v1.0.0
+        imagePullPolicy: IfNotPresent
+        args: ["--target", "1.1.1.1", "--metrics", ":8080"]
+        ports:
+        - containerPort: 8080
+          name: metrics
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+          requests:
+            cpu: "100m"
+            memory: "64Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: omniping-service
+  namespace: monitoring
+spec:
+  selector:
+    app: omniping
+  ports:
+  - port: 8080
+    targetPort: metrics
+    name: metrics
+  type: ClusterIP
