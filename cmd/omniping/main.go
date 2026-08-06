@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/username/omniping/internal/engine"
-	"github.com/username/omniping/internal/exporter"
+	"github.com/darnellwashintonjr94-art/omniping/internal/engine"
+	"github.com/darnellwashintonjr94-art/omniping/internal/exporter"
 )
 
 func main() {
