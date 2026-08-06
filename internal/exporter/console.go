@@ -3,7 +3,7 @@ package exporter
 import (
 	"fmt"
 
-	"github.com/username/omniping/pkg/telemetry"
+	"github.com/darnellwashintonjr94-art/omniping/pkg/telemetry"
 )
 
 func PrintResults(results []telemetry.Result) {
