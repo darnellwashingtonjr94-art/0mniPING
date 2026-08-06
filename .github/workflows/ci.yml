@@ -9,11 +9,22 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    # Explicitly set the working directory if your Go module is nested
+    defaults:
+      run:
+        working-directory: ./omniping
+    
     steps:
     - uses: actions/checkout@v4
+    
     - name: Set up Go
       uses: actions/setup-go@v5
       with:
         go-version: '1.22'
+        cache-dependency-path: ./omniping/go.sum
+        
+    - name: Download Dependencies
+      run: go mod download
+      
     - name: Test
       run: go test -v ./...
