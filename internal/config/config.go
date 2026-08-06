@@ -6,15 +6,15 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-type Config struct {
- `yaml:"targets"`
-}
-
 type TargetConfig struct {
 	Name    string `yaml:"name"`
 	Address string `yaml:"address"`
 	Layer   string `yaml:"layer"`
 	Type    string `yaml:"type"`
+}
+
+type Config struct {
+	Targets []TargetConfig `yaml:"targets"`
 }
 
 func LoadConfig(path string) (*Config, error) {
