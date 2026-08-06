@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/username/omniping/internal/layers/l3_network"
-	"github.com/username/omniping/pkg/telemetry"
+	"github.com/darnellwashintonjr94-art/omniping/internal/layers/l3_network"
+	"github.com/darnellwashintonjr94-art/omniping/pkg/telemetry"
 )
 
 type Runner struct {
