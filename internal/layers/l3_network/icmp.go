@@ -5,7 +5,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/username/omniping/pkg/telemetry"
+	"github.com/darnellwashintonjr94-art/omniping/pkg/telemetry"
 	"golang.org/x/net/icmp"
 	"golang.org/x/net/ipv4"
 )
