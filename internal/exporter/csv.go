@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/username/omniping/pkg/telemetry"
+	"github.com/darnellwashingtonjr94-art/omniping/pkg/telemetry"
 )
 
 type CSVExporter struct {
