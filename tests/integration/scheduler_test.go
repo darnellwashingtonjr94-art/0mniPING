@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/username/omniping/internal/engine"
-	"github.com/username/omniping/pkg/telemetry"
+	"github.com/darnellwashingtonjr94-art/omniping/internal/engine"
+	"github.com/darnellwashingtonjr94-art/omniping/pkg/telemetry"
 )
 
 func TestSchedulerTick(t *testing.T) {
