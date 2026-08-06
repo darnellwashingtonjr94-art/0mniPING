@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/username/omniping/internal/exporter"
-	"github.com/darnellWashingtonjr94-art/omniping/pkg/telemetry"
+	"github.com/darnellwashingtonjr94-art/omniping/internal/exporter"
+	"github.com/darnellwashingtonjr94-art/omniping/pkg/telemetry"
 )
 
 func TestJSONExporterIntegration(t *testing.T) {
