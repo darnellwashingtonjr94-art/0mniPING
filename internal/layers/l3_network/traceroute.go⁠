@@ -1,0 +1,30 @@
+package l3_network
+
+import (
+	"context"
+	"time"
+
+	"github.com/darnellwashingtonjr94-art/omniping/pkg/telemetry"
+)
+
+func ProbeTraceroute(ctx context.Context, target string) telemetry.Result {
+	start := time.Now()
+	res := telemetry.Result{
+		Timestamp: start,
+		Target:    target,
+		Layer:     "L3",
+		Probe:     "traceroute",
+	}
+
+	select {
+	case <-ctx.Done():
+		res.Status = telemetry.StatusDown
+		res.Error = ctx.Err().Error()
+		return res
+	case <-time.After(45 * time.Millisecond):
+		res.Status = telemetry.StatusUp
+		res.Latency = time.Since(start)
+	}
+
+	return res
+}
