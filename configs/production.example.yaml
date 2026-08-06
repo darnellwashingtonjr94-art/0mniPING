@@ -1,0 +1,9 @@
+targets:
+  - name: "core-router-01"
+    address: "10.0.0.1"
+    layer: "L3"
+    type: "icmp"
+  - name: "api-gateway"
+    address: "https://api.example.com/healthz"
+    layer: "L7"
+    type: "http_health"
