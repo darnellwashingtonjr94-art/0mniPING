@@ -1,4 +1,4 @@
-module github.com/username/omniping
+module github.com/darnellwashintonjr94-art/omniping
 
 go 1.22
 
