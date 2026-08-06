@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/username/omniping/pkg/telemetry"
+	"github.com/darnellwashingtonjr94-art/omniping/pkg/telemetry"
 )
 
 func ProbeWebSocket(ctx context.Context, target string) telemetry.Result {
